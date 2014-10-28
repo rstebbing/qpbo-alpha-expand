@@ -1,0 +1,5 @@
+build/
+external/
+*.pyc
+*.so
+*.pyd

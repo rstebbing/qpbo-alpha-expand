@@ -166,11 +166,10 @@ int main() {
     qpbo::alpha_expand(U, Ps, G, qpbo::AllLabelsAreValid(), &l, 100);
     std::cout << "  Final `l`: " << l.transpose() << std::endl;
 
-    // and again with `ValidIfInSortedVector`.
+    // ... and again with `ValidIfInSortedVector`.
     Eigen::VectorXi sorted_labels(num_labels);
-    for (Index i = 0; i < num_labels; ++i) {
-      sorted_labels[i] = static_cast<Eigen::VectorXi::Scalar>(i);
-    }
+    sorted_labels.setLinSpaced(0, static_cast<int>(num_labels) - 1);
+
     std::vector<const Eigen::VectorXi*> valid;
     valid.push_back(&sorted_labels); // Node 0.
     valid.push_back(&sorted_labels); // Node 1.

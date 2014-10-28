@@ -28,7 +28,9 @@ struct AllLabelsAreValid {
 // ValidIfInSortedVector
 // A label validator which checks if label `j` is present in a vector of
 // (sorted) available labels for node `i`.
-// Importantly, the vectors in `valid` are assumed to be sorted.
+// Importantly, the size of `valid` must be equal to the number of nodes in
+// the problem, and the vectors in `valid` must be sorted. Both of these
+// conditions are assumed and are the responsibility of the caller.
 template <typename T>
 class ValidIfInSortedVector {
  public:

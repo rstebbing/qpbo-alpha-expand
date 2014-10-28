@@ -59,14 +59,6 @@ auto energy(const Unary& U,
             const Labels& l,
             typename Unary::Scalar* eu = nullptr,
             typename Unary::Scalar* ep = nullptr) -> typename Unary::Scalar {
-  static_assert(std::is_same<typename Unary::Scalar,
-                             typename Pairwise::Scalar>::value,
-                "U and Ps must have the same scalar type.");
-  static_assert(Graph::IsRowMajor,
-                "G must be row major.");
-  static_assert(std::is_integral<typename Graph::Scalar>::value,
-                "G must have an integral type.");
-
   typename Unary::Scalar eu_(0), ep_(0);
 
   for (typename Graph::Index i = 0; i < G.outerSize(); ++i) {

@@ -47,8 +47,7 @@ class ValidIfInSortedVector {
 };
 
 // energy
-// Return the energy of the current labelling `l` and (optionally) set the
-// unary energy `eu` and pairwise energy `ep`.
+// Return the energy of the current labelling `l`.
 template <typename Unary,
           typename Pairwise,
           typename Graph,
@@ -56,27 +55,18 @@ template <typename Unary,
 auto energy(const Unary& U,
             const std::vector<const Pairwise*>& Ps,
             const Graph& G,
-            const Labels& l,
-            typename Unary::Scalar* eu = nullptr,
-            typename Unary::Scalar* ep = nullptr) -> typename Unary::Scalar {
-  typename Unary::Scalar eu_(0), ep_(0);
+            const Labels& l) -> typename Unary::Scalar {
+  typename Unary::Scalar e(0);
 
   for (typename Graph::Index i = 0; i < G.outerSize(); ++i) {
-    eu_ += U(l[i], i);
+    e += U(l[i], i);
 
     for (typename Graph::InnerIterator it(G, i); it; ++it) {
-      ep_ += (*Ps[it.value() - 1])(l[it.col()], l[i]);
+      e += (*Ps[it.value() - 1])(l[it.col()], l[i]);
     }
   }
 
-  if (eu != nullptr) {
-    *eu = eu_;
-  }
-  if (ep != nullptr) {
-    *ep = ep_;
-  }
-
-  return eu_ + ep_;
+  return e;
 }
 
 // has_cols

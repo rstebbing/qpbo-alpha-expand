@@ -7,7 +7,7 @@ np.import_array()
 
 from scipy import sparse
 
-# Requires util/python on `PYTHONPATH`.
+# Requires common/python on `PYTHONPATH`.
 from argcheck import check_ndarray_or_raise, check_type_or_raise
 
 # Type

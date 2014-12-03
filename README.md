@@ -38,7 +38,7 @@ All QPBO files should reside under external/QPBO-v1.32.src/.
 Python
 ------
 1. Extract [QPBO-v1.32.src.zip] [2] as above.
-2. Set `EIGEN_INCLUDE` and `UTIL_CPP_INCLUDE` in site.cfg.
+2. Set `EIGEN_INCLUDE` and `COMMON_CPP_INCLUDE` in site.cfg.
 3. Build the Python extension in place: `python setup.py build_ext --inplace`.
 (Use `export CFLAGS=-std=c++11` beforehand if compiling with gcc.)
 4. With rstebbing/common/python on `PYTHONPATH`, run example.py.

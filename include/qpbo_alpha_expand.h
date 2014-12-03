@@ -1,4 +1,10 @@
-// qpbo_alpha_expand.h
+////////////////////////////////////////////
+// File: qpbo_alpha_expand.h              //
+// Copyright Richard Stebbing 2014.       //
+// Distributed under the MIT License.     //
+// (See accompany file LICENSE or copy at //
+//  http://opensource.org/licenses/MIT)   //
+////////////////////////////////////////////
 #ifndef QPBO_ALPHA_EXPAND_H
 #define QPBO_ALPHA_EXPAND_H
 

@@ -29,7 +29,7 @@ C++
 1. Extract [QPBO-v1.32.src.zip] [2] to the subdirectory external/ under the project root.
 All QPBO files should reside under external/QPBO-v1.32.src/.
 2. Run cmake with an out of source build.
-3. Set `EIGEN_INCLUDE` to the full path up to and including eigen3/.
+3. Set `EIGEN_INCLUDE_DIR` to the full path up to and including eigen3/.
 (Add `-std=c++11` to `CMAKE_CXX_FLAGS` if compiling with gcc.)
 4. Configure.
 5. Build.
@@ -41,7 +41,7 @@ Python
 2. Set `EIGEN_INCLUDE` and `COMMON_CPP_INCLUDE` in site.cfg.
 3. Build the Python extension in place: `python setup.py build_ext --inplace`.
 (Use `export CFLAGS=-std=c++11` beforehand if compiling with gcc.)
-4. With rstebbing/common/python on `PYTHONPATH`, run example.py.
+4. With [rstebbing/common/python](https://github.com/rstebbing/common/tree/master/python) on `PYTHONPATH`, run example.py.
 
 [1]: http://www.wisdom.weizmann.ac.il/~bagon/matlab_code/ExtendedGCmex1.3.tar.gz
 [2]: http://pub.ist.ac.at/~vnk/software/QPBO-v1.32.src.zip

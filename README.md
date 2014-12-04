@@ -5,8 +5,8 @@ A C++ implementation of alpha-expansion moves using QPBO for minimisation of non
 `qpbo_alpha_expand` is inspired by [Shai Bagon's MATLAB wrapper] [1] and uses [Vladimir Kolmogorov's QPBO implementation] [2].
 
 This project was motivated by the need to minimise problems with large label spaces where direct instantiation of the unary and pairwise energy matrices was not possible.
-Furthermore, for these problems, the label spaces for each node were also restricted.
-This `qpbo_alpha_expand` implementation makes use of templates to enable straightforward lazy evaluation of the unary and pairwise energies, and restriction of the label spaces.
+For the problems of interest, the label spaces for each node were also restricted.
+This `qpbo_alpha_expand` implementation makes use of templates to enable straightforward lazy evaluation of the unary and pairwise energies and restriction of the label spaces.
 
 Author: Richard Stebbing
 
@@ -28,12 +28,12 @@ C++
 ---
 1. Extract [QPBO-v1.32.src.zip] [2] to the subdirectory external/ under the project root.
 All QPBO files should reside under external/QPBO-v1.32.src/.
-2. Run cmake with an out of source build.
+2. Run CMake with an out of source build.
 3. Set `EIGEN_INCLUDE_DIR` to the full path up to and including eigen3/.
 (Add `-std=c++11` to `CMAKE_CXX_FLAGS` if compiling with gcc.)
 4. Configure.
 5. Build.
-5. Run example.
+5. Run [example](example.cpp).
 
 Python
 ------
@@ -41,7 +41,7 @@ Python
 2. Set `EIGEN_INCLUDE` and `COMMON_CPP_INCLUDE` in site.cfg.
 3. Build the Python extension in place: `python setup.py build_ext --inplace`.
 (Use `export CFLAGS=-std=c++11` beforehand if compiling with gcc.)
-4. With [rstebbing/common](https://github.com/rstebbing/common/tree/master) installed, run example.py.
+4. With [rstebbing/common](https://github.com/rstebbing/common/tree/master) installed, run [example.py](example.py).
 
 To make `qpbo_alpha_expand` available to other projects:
 

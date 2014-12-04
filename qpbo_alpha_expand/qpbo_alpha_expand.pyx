@@ -13,8 +13,8 @@ np.import_array()
 
 from scipy import sparse
 
-# Requires common/python on `PYTHONPATH`.
-from argcheck import check_ndarray_or_raise, check_type_or_raise
+# Requires `rscommon`.
+from rscommon.argcheck import check_ndarray_or_raise, check_type_or_raise
 
 # Type
 ctypedef np.float64_t DTYPE_t

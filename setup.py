@@ -43,7 +43,16 @@ include_dirs = [NUMPY_INCLUDE, EIGEN_INCLUDE, COMMON_CPP_INCLUDE,
 qpbo_srcs = [join(qpbo_dir, f) for f in os.listdir(qpbo_dir)
              if os.path.splitext(f)[1] == '.cpp']
 
-setup(ext_modules=[
+modules = []
+
+setup(name='qpbo_alpha_expand',
+      version='0.1',
+      author='Richard Stebbing',
+      author_email='richie.stebbing@gmail.com',
+      license='MIT',
+      url='https://github.com/rstebbing/qpbo-alpha-expand',
+      packages=['qpbo_alpha_expand'] + modules,
+      ext_modules=[
         Extension('qpbo_alpha_expand.qpbo_alpha_expand',
                   ['qpbo_alpha_expand/qpbo_alpha_expand.pyx'] + qpbo_srcs,
                   language='c++',

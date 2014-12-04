@@ -11,7 +11,7 @@ import numpy as np
 from scipy import sparse
 from scipy.spatial import distance
 
-from qpbo_alpha_expand.qpbo_alpha_expand import qpbo_alpha_expand
+from qpbo_alpha_expand import qpbo_alpha_expand
 
 # main
 def main():

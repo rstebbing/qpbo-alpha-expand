@@ -41,7 +41,13 @@ Python
 2. Set `EIGEN_INCLUDE` and `COMMON_CPP_INCLUDE` in site.cfg.
 3. Build the Python extension in place: `python setup.py build_ext --inplace`.
 (Use `export CFLAGS=-std=c++11` beforehand if compiling with gcc.)
-4. With [rstebbing/common/python](https://github.com/rstebbing/common/tree/master/python) on `PYTHONPATH`, run example.py.
+4. With [rstebbing/common](https://github.com/rstebbing/common/tree/master) installed, run example.py.
+
+To make `qpbo_alpha_expand` available to other projects:
+
+1. Build: `python setup.py build`.
+(Use `export CFLAGS=-std=c++11` beforehand if compiling with gcc.)
+2. Install: `python setup.py install`.
 
 [1]: http://www.wisdom.weizmann.ac.il/~bagon/matlab_code/ExtendedGCmex1.3.tar.gz
 [2]: http://pub.ist.ac.at/~vnk/software/QPBO-v1.32.src.zip

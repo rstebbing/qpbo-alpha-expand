@@ -43,7 +43,7 @@ Python
 (Use `export CFLAGS=-std=c++11` beforehand if compiling with gcc.)
 4. With [rstebbing/common](https://github.com/rstebbing/common/tree/master) installed, run [example.py](example.py).
 
-To make `qpbo_alpha_expand` available to other projects:
+To make `qpbo_alpha_expand` available to other projects (either globally or under a [virtualenv](http://docs.python-guide.org/en/latest/dev/virtualenvs)):
 
 1. Build: `python setup.py build`.
 (Use `export CFLAGS=-std=c++11` beforehand if compiling with gcc.)
